@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/csc_settlement
+    username: admin
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+application:
+  security:
+    jwt:
+      secret-key: 4bb6d1dfbafb64a681139d1586b6f1160d18159afd57c8c79136d7490630407c
+      access-token-expiration: 86400000
+      refresh-token-expiration: 604800000
+
+  comms:
+    email: vpsm3025@gmail.com
+    slack: https://hooks.slack.com/services/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
+  aws:
+    s3:
+      bucket-name: settlement-bucket
+      bucket-region: AP_SOUTH_1
+      access-key: tyjejrgknenjrg
+      secret-key: ergwgtethgw4thwt4
+
